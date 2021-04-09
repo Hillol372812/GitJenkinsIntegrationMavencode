@@ -60,7 +60,7 @@ public class LoginStepDefinition{
 	 public void user_is_on_hopme_page(){
 	 String title = driver.getTitle();
 	 System.out.println("Home Page title ::"+ title);
-	 Assert.assertEquals("Cogmento CRM", title);
+	 Assert.assertEquals("Cogment CRM", title);
 	 }
 	 
 	 @Then("^user moves to new contact page$")
