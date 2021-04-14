@@ -24,6 +24,7 @@ public class LoginStepDefinition{
 	 WebDriverManager.chromedriver().setup();
 		 driver = new ChromeDriver();
 	 driver.get("https://www.freecrm.com/index.html");
+	 driver.manage().window().maximize();
 	 }
 	
 	
@@ -40,7 +41,8 @@ public class LoginStepDefinition{
 	 //2. \"(.*)\"
 	
 	 @Then("^user  enters \"([^\"]*)\" and \"([^\"]*)\"$")
-	 public void user_enters_username_and_password(String username, String password){
+	 public void user_enters_username_and_password(String username, String password) throws InterruptedException{
+		 Thread.sleep(10000);
 	 driver.findElement(By.name("email")).sendKeys(username);
 	 driver.findElement(By.name("password")).sendKeys(password);
 	 }
