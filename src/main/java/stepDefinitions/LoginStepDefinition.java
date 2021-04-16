@@ -25,6 +25,7 @@ public class LoginStepDefinition{
 		 driver = new ChromeDriver();
 	 driver.get("https://www.freecrm.com/index.html");
 	 driver.manage().window().maximize();
+	System.out.println("Window Maximize : Yes");	 
 	 }
 	
 	
